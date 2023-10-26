@@ -6,50 +6,12 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:44:33 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/26 09:17:05 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:06:17 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/cub3d.h"
 #include "../../include/ray_casting_bonus.h"
-
-void	print_struct(t_cub *cub)
-{
-	printf("*****************************\n");
-	if (cub->no)
-		printf("cub->no = %s\n", cub->no);
-	if (cub->so)
-		printf("cub->so = %s\n", cub->so);
-	if (cub->we)
-		printf("cub->we = %s\n", cub->we);
-	if (cub->ea)
-		printf("cub->ea = %s\n", cub->ea);
-	if (cub->f_color)
-		printf("cub->f_color = %s\n", cub->f_color);
-	if (cub->c_color)
-		printf("cub->c_color = %s\n", cub->c_color);
-	if (cub->map_str)
-		printf("cub->map_str =\n%s", cub->map_str);
-	printf("\n*****************************\n");
-}
-
-// static void print_maps(t_data * data)
-// {
-// 	int i = 0;
-// 	printf("\n******* map_cpy ***********\n");
-// 	while (data->map_cpy[i])
-// 	{
-// 		printf("%s\n", data->map_cpy[i]);
-// 		i++;
-// 	}
-// 	i = 0;
-// 	printf("\n******** buffer_cpy *************\n");
-// 	while (data->buffer_cpy[i])
-// 	{
-// 		printf("%s\n", data->map_cpy[i]);
-// 		i++;
-// 	}
-// }
 
 void	free_cub_struct(t_cub *cub)
 {

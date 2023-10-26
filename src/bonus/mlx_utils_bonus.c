@@ -6,7 +6,7 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 16:17:33 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/26 11:17:04 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:07:10 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,6 @@ unsigned int	my_mlx_pixel_get(t_tex_img *img, int x, int y)
 	(img->bpp / 8)));
 	return (dst);
 }
-
-// static void	free_destroy_images(char)
 
 static void	destroy_images_b(t_cbd *cbd, t_data *data)
 {

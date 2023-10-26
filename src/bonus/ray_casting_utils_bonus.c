@@ -6,14 +6,14 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 09:47:29 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/26 09:21:12 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:07:39 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/ray_casting_bonus.h"
 
 /**
- * @brief check if there is wall in the next position with dda algorithm
+ * @brief check if there is wall or door in the next position with dda algorithm
  *
  * @param x next position of x
  * @param y next position of y

@@ -6,7 +6,7 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 10:33:18 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/26 09:41:14 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:04:58 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	draw_background(t_ray *ray)
  */
 void	draw_image_b(t_ray *ray, t_line *line, int door)
 {
-	ray->wall_height = GRID_PIX / ray->distance * PR_PLANE;
+	ray->wall_height = (int)(GRID_PIX / ray->distance * (PR_PLANE * 0.75));
 	ray->y_count = TEX_PIX / ray->wall_height;
 	if (ray->shortest == 'h')
 		texture_location(ray, ray->y_count, line->x1, line->y1);
@@ -53,30 +53,3 @@ void	draw_image_b(t_ray *ray, t_line *line, int door)
 		texture_location(ray, ray->y_count, line->v_x1, line->v_y1);
 	texture_wall_b(ray, ray->ray_count, (int)ray->wall_height, door);
 }
-
-// /**
-//  * @brief
-//  *
-//  * @param ray
-//  * @param ray_count (0 to 599)
-//  */
-// void	color_wall(t_ray *ray, int pos, int wall)
-// {
-// 	float		wall_start;
-// 	float		wall_end;
-// 	float		i;
-
-// 	i = 0;
-// 	pos = WIN_SIZE_X - (pos + 1);
-// 	wall_start = WIN_SIZE_Y / 2 - (wall / 2);
-// 	wall_end = wall_start + wall;
-// 	if (wall_start < 0)
-// 		wall_start = 0;
-// 	if (wall_end > WIN_SIZE_Y)
-// 		wall_end = WIN_SIZE_Y;
-// 	while ((int)(wall_start + i) < (int)wall_end)
-// 	{
-// 		my_mlx_pixel_put(ray->cbd, pos, wall_start + i, GREY);
-// 		i++;
-// 	}
-// }

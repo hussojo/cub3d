@@ -6,7 +6,7 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 12:31:40 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/26 09:48:11 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 18:35:39 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "cub3d.h"
 # include "map_validation.h"
+# include <mlx.h>
 
 typedef struct s_cub		t_cub;
 typedef struct s_ray		t_ray;

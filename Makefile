@@ -6,7 +6,7 @@
 #    By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 12:17:49 by yoonslee          #+#    #+#              #
-#    Updated: 2023/10/26 10:23:23 by yoonslee         ###   ########.fr        #
+#    Updated: 2023/10/26 19:11:58 by yoonslee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,8 @@ COLOUR_END=\033[0m
 
 ### SET UP ###
 CC = cc #-arch x86_64
-#MLX_FLAGS = -lmlx -framework OpenGL -framework AppKit
-CFLAGS =  -I$I -Wall -Wextra -Werror #-fsanitize=address,undefined #-g
+MLX_FLAGS = -lmlx -framework OpenGL -framework AppKit
+CFLAGS =  -I$I -Wall -Wextra -Werror #-g
 
 RM = /bin/rm -f
 RMDIR = /bin/rmdir -p
@@ -93,12 +93,6 @@ B_SRCS := $(foreach B_FILE,$(B_FILES),$(shell find $S -type f -name '$(B_FILE).c
 B_OBJS = $(patsubst $S/%,$B/%,$(B_SRCS:.c=.o))
 B_O_DIRS = $(dir $(B_OBJS))
 
-#Minilibx
-MLX_PATH	= mlx/
-MLX_NAME	= libmlx.a
-MLX			= $(MLX_PATH)$(MLX_NAME)
-MLX_LNK	= -L ./mlx -lmlx -framework OpenGL -framework AppKit
-
 NAME = cub3D
 NAME_BONUS = cub3D_bonus
 
@@ -109,9 +103,9 @@ $O/%.o: $S/%.c $(HEADER)
 	@mkdir -p $(O_DIRS)
 	@$(CC) $(CFLAGS) -Imlx -c $< -o $@
 
-$(NAME): $(OBJS) $(MLX) $(LIBFT)
+$(NAME): $(OBJS) $(LIBFT)
 	@echo "Compiling cub3D..."
-	@$(CC) $(CFLAGS) $(MLX) $(MLX_LNK) $(LIBFT) $(OBJS) -o $(NAME)
+	@$(CC) $(CFLAGS) $(MLX_FLAGS) $(LIBFT) $(OBJS) -o $(NAME)
 	@echo "$(COLOUR_GREEN) $(NAME) created$(COLOUR_END)"
 
 bonus: $(NAME_BONUS)
@@ -120,16 +114,10 @@ $B/%.o: $S/%.c $(B_HEADER)
 	@mkdir -p $(B_O_DIRS)
 	@$(CC) $(CFLAGS) -Imlx -c $< -o $@
 
-$(NAME_BONUS): $(B_OBJS) $(MLX) $(LIBFT)
+$(NAME_BONUS): $(B_OBJS) $(LIBFT)
 	@echo "Compiling cub3D_bonus..."
-	@$(CC) $(CFLAGS) $(MLX) $(MLX_LNK) $(LIBFT) $(B_OBJS) -o $(NAME_BONUS)
+	@$(CC) $(CFLAGS) $(MLX_FLAGS) $(LIBFT) $(B_OBJS) -o $(NAME_BONUS)
 	@echo "$(COLOUR_GREEN) $(NAME_BONUS) created$(COLOUR_END)"
-
-### MLX
-$(MLX):
-	@echo "Making MiniLibX..."
-	@make -sC $(MLX_PATH)
-	@echo "$(COLOUR_GREEN) $(MLX) created$(COLOUR_END)"
 
 ### LIBFT
 
