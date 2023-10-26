@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rgb_colour.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 10:47:53 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/26 14:21:42 by jhusso           ###   ########.fr       */
+/*   Updated: 2023/10/26 19:22:09 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void	init_textures(t_cub *cub, t_ray *ray)
 	ray->data->texture[WE] = get_new_xpm_img(ray, cub->we, cub);
 	ray->data->texture[EA] = get_new_xpm_img(ray, cub->ea, cub);
 }
+
 /// @brief turns rgb values into unsigned integer values
 /// @param arr rgb values from F or C element line (ex. 20,20,20)
 /// @return single unsigned integer value of the respective rgb value
