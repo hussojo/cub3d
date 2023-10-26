@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   movement.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 10:19:57 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/17 13:08:47 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 14:40:08 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ static int	side_wall_check(t_ray *ray, t_vector *next, float degree)
 
 /**
  * @brief check if next movement is movable
- *
  * @param x next x position
  * @param y next y position
  * @return returns 1 if movable, if not, returns 0

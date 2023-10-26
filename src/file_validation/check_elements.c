@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_elements.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 16:13:30 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/24 12:59:23 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 13:51:49 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /// @brief checks that floor and ceiling colors have three numbers
 /// separated by comma and that color values are correct
-/// @param element rgb colorvalues separated by comma
+/// @param element rgb color values separated by comma
 /// (second element of an array of splitted line)
 /// @return 0 upon success, -1 if failure
 static int	check_colors(t_cub *cub, char *element)
@@ -34,7 +34,10 @@ static int	check_colors(t_cub *cub, char *element)
 			return (-1);
 		}
 		if (ft_atoi(colors[i]) < 0 || ft_atoi(colors[i]) > 255)
-			file_print_error(cub, "Invalid RGB value!\n", 0);
+		{
+			free_char_array(colors);
+			return (-1);
+		}
 		else
 			i++;
 	}

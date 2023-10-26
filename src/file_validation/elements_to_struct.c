@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   elements_to_struct.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 15:57:39 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/24 13:55:50 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:16:58 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/file_validation.h"
+
 /// @brief first checks that element information is valid, then adds the
 /// information to cub struct, gives error message if finds duplicate elements
 /// @param element line from file splitted by spaces
@@ -37,7 +38,7 @@ static void	put_elem_to_struct(char **element, t_cub *cub)
 /**
  * @brief check elements each and see if the RGB value has spaces
  * in between
- * 
+ *
  * @param elem str that is splitted by spces from file
  * @param len len of elem str
  */

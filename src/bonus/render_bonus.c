@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   render_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:00:33 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/26 10:18:24 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:10:41 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/ray_casting_bonus.h"
-#include "../../include/ray_casting.h"
+#include "../../include/cub3d.h"
 
 /**
  * @brief rernders the image when opens the screen or the key is used.
@@ -90,6 +89,9 @@ void	init_render_utils_b(t_cbd *cbd, t_data *mv, t_cub *cub)
 	cbd->mlx = mlx_init();
 	if (!cbd->mlx)
 		mlx_exit_b(&ray, cub, "Error connecting to mlx!\n", 1);
+	if (WIN_SIZE_X != 1920 || WIN_SIZE_Y != 1080)
+		mlx_exit_b(&ray, cub, "Window size should remain the same for the best \
+experience!(X : 1920, Y:1080)\n", 0);
 	cbd->window = mlx_new_window(cbd->mlx, WIN_SIZE_X, WIN_SIZE_Y, "cub");
 	if (cbd->window == NULL)
 		mlx_exit_b(&ray, cub, "Error creating mlx window!\n", 1);

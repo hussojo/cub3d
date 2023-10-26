@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_validation_utils.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 17:04:28 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/26 10:32:27 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 14:05:21 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,22 +79,6 @@ void	copy_map(t_cub *cub, t_data *mv)
 	}
 	mv->width = width;
 	player_location(mv);
-}
-
-/**
- * @brief print the map that is 2Darray
- */
-void	print_map(char **map)
-{
-	int	i;
-
-	i = 0;
-	while (map[i])
-	{
-		printf("Row index = %i\t%s\n", i, map[i]);
-		i++;
-	}
-	printf("\n");
 }
 
 /// @brief flood fills the walls, searching recursively 1's

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ray_casting.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 09:09:04 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/26 11:14:00 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:07:16 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 # define PLAYER_S 5
 # define PR_PLANE 1662
 # define SENSITIVITY 0.05
-// # define NOSE_LEN 1
 
 # define BLACK 0x000000
 # define WHITE 0xffffff
@@ -45,7 +44,6 @@
 # define TEAL 0x008080
 
 # include "cub3d.h"
-# include "map_validation.h"
 
 typedef struct s_data		t_data;
 typedef struct s_cub		t_cub;
@@ -149,7 +147,6 @@ int				set_wall_direction(t_ray *ray);
 //drawing.c
 void			draw_background(t_ray *ray);
 void			draw_image(t_ray *ray, t_line *line);
-// void			color_wall(t_ray *ray, int pos, int wall);
 
 // hooks.c
 int				key_event(int keysym, t_ray *ray, t_cub *cub);

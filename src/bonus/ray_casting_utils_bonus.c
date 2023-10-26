@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ray_casting_utils_bonus.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 09:47:29 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/26 09:21:12 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:10:49 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/ray_casting_bonus.h"
+#include "../../include/cub3d.h"
 
 /**
  * @brief check if there is wall in the next position with dda algorithm
@@ -32,7 +32,7 @@ int	is_wall_b(t_ray *ray, float x, float y)
 
 /**
  * @brief fix angle to be in between 0-359
- * 
+ *
  * @return fixed angle after calculation of +- 360 based on the condition
  */
 float	fix_angle(float a)
@@ -46,7 +46,7 @@ float	fix_angle(float a)
 
 /**
  * @brief change the degree to radian for the usage in mathmatical functions
- * 
+ *
  * @return radian value of the angle
  */
 float	deg_to_rad(float degree)
@@ -76,7 +76,7 @@ void	player_orientation_to_angle(t_data *mv, t_ray *ray)
 }
 
 /**
- * @brief calculate and check the distance between horizontal and 
+ * @brief calculate and check the distance between horizontal and
  * vertical length. cosine function is to remove the fish-eye distortion.
  * @return returns 1 if the hit is door, if not, it returns 0.
  */

@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   texture.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 09:18:41 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/26 10:32:38 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:16:43 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
 #include "../../include/ray_casting.h"
 
 /**
  * @brief based on the x,y position of wall & its texture position,
  * we paint the wall of the maps with xpm images
- * 
+ *
  * @param wall height of the wall
  * @param y_count how fast we need to chage the position of the y of texture.
  */
@@ -45,7 +44,7 @@ void	texture_wall(t_ray *ray, int pos, int wall, float y_count)
  * @brief calculating texture's x by checking the  direction of hitthing the wall
  * (horizontal or vertical) and it's x y position. y will start from 0 unless
  * it's size is bigger than height of the wall.
- * 
+ *
  * commented out functions work?? My calculation works?? confused? by. Sunny
  */
 void	texture_location(t_ray *ray, float y_count, float x, float y)

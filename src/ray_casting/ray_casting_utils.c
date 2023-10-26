@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ray_casting_utils.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 09:47:29 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/17 13:13:31 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 14:40:25 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 /**
  * @brief check if there is wall in the next position with dda algorithm
- *
  * @param x next position of x
  * @param y next position of y
  * @return 1 if there is wall, 0 if there isn't any wall
@@ -31,7 +30,6 @@ int	is_wall(t_ray *ray, float x, float y)
 
 /**
  * @brief fix angle to be in between 0-359
- * 
  * @return fixed angle after calculation of +- 360 based on the condition
  */
 float	fix_angle(float a)
@@ -45,7 +43,6 @@ float	fix_angle(float a)
 
 /**
  * @brief change the degree to radian for the usage in mathmatical functions
- * 
  * @return radian value of the angle
  */
 float	deg_to_rad(float degree)
@@ -75,7 +72,7 @@ void	player_orientation_to_angle(t_data *mv, t_ray *ray)
 }
 
 /**
- * @brief calculate and check the distance between horizontal and 
+ * @brief calculate and check the distance between horizontal and
  * vertical length. cosine function is to remove the fish-eye distortion.
  */
 void	compare_draw_rays(t_ray *ray, t_line *line)

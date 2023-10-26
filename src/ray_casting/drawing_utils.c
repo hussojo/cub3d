@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   drawing_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoonseonlee <yoonseonlee@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 07:12:23 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/26 02:14:56 by yoonseonlee      ###   ########.fr       */
+/*   Updated: 2023/10/26 15:16:55 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/ray_casting.h"
-#include "../../include/cub3d.h"
 
 static int	rays_looking_up(t_ray *ray)
 {
@@ -54,7 +53,6 @@ static int	rays_looking_down(t_ray *ray)
 /**
  * @brief Set the wall direction based on the ray's horizontal
  * and vertical hit and the ray angle.
- * 
  * @return side of the wall that the ray hits
  */
 int	set_wall_direction(t_ray *ray)
