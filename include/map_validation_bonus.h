@@ -6,7 +6,7 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 12:31:40 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/26 18:35:39 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:14:56 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define MAP_VALIDATION_BONUS_H
 
 # include "cub3d.h"
-# include "map_validation.h"
 # include <mlx.h>
 
 typedef struct s_cub		t_cub;
@@ -45,7 +44,6 @@ int				map_check_b(t_cub	*cub, t_data *mv);
 void			free_mv_struct_b(t_data *mv);
 void			print_error_b(t_cub *cub, t_data *mv, char *str, int code);
 void			copy_map(t_cub *cub, t_data *mv);
-void			print_map(char **map);
 void			flood_fill(t_data *mv, int x, int y, char c);
 
 // rgb_colour_bonus.c
@@ -56,6 +54,6 @@ unsigned int	change_colour(char *colour);
 
 // wall_check.c
 void			set_buffer(t_cub *cub, t_data *data);
-int				wall_check(t_cub *cub, t_data *data);
+void			wall_check(t_cub *cub, t_data *data);
 
 #endif

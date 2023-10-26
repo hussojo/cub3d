@@ -6,11 +6,11 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 08:14:54 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/26 19:10:09 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:16:41 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/ray_casting_bonus.h"
+#include "../../include/cub3d.h"
 
 int	mouse_event(int x, int y, t_ray *ray)
 {

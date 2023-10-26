@@ -6,7 +6,7 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:44:33 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/26 19:08:29 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:15:55 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	main(int argc, char **argv)
 	}
 	else
 	{
-		ft_putstr_fd("Wrong argument! put argument as such :", 2);
+		ft_putstr_fd("Wrong argument! put argument as such:", 2);
 		ft_putstr_fd("./cub3D maps/good/(mapname).cub\n", 2);
 	}
 	return (0);

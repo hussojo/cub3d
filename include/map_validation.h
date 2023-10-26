@@ -6,7 +6,7 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 12:31:40 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/26 18:35:42 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:15:24 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,6 @@ int				map_check(t_cub	*cub, t_data *mv);
 void			free_mv_struct(t_data *mv);
 void			print_error(t_cub *cub, t_data *mv, char *str, int code);
 void			copy_map(t_cub *cub, t_data *mv);
-void			print_map(char **map);
 void			flood_fill(t_data *mv, int x, int y, char c);
 
 // rgb_colour.c
@@ -82,6 +81,6 @@ unsigned int	change_colour(char *colour);
 
 // wall_check.c
 void			set_buffer(t_cub *cub, t_data *data);
-int				wall_check(t_cub *cub, t_data *data);
+void			wall_check(t_cub *cub, t_data *data);
 
 #endif

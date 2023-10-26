@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wall_check.c                                       :+:      :+:    :+:   */
+/*   wall_check_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 07:51:46 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/25 13:01:00 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:10:01 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,7 @@ void	set_buffer(t_cub *cub, t_data *data)
 	flood_fill_inside(cub, data, data->player_x + 1, data->player_y + 1);
 }
 
-int	wall_check(t_cub *cub, t_data *data)
+void	wall_check(t_cub *cub, t_data *data)
 {
 	set_buffer(cub, data);
-	return (0);
 }

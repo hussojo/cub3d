@@ -6,12 +6,11 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:44:33 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/26 19:06:17 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:16:31 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/cub3d.h"
-#include "../../include/ray_casting_bonus.h"
 
 void	free_cub_struct(t_cub *cub)
 {

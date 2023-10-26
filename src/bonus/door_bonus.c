@@ -6,11 +6,10 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 14:39:10 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/26 19:03:55 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:16:01 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/ray_casting_bonus.h"
 #include "../../include/cub3d.h"
 
 /**

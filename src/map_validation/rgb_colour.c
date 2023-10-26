@@ -6,12 +6,18 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 10:47:53 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/18 10:41:04 by jhusso           ###   ########.fr       */
+/*   Updated: 2023/10/26 14:21:42 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/map_validation.h"
 
+/// @brief Turns texture_file.png into image using mlx library
+/// @param ray
+/// @param file_path cub struct param that hs the file path prsed from
+/// configuration file
+/// @param cub
+/// @return new created img struct
 t_tex_img	*get_new_xpm_img(t_ray *ray, char *file_path, t_cub *cub)
 {
 	t_tex_img	*img;
@@ -38,7 +44,9 @@ void	init_textures(t_cub *cub, t_ray *ray)
 	ray->data->texture[WE] = get_new_xpm_img(ray, cub->we, cub);
 	ray->data->texture[EA] = get_new_xpm_img(ray, cub->ea, cub);
 }
-
+/// @brief turns rgb values into unsigned integer values
+/// @param arr rgb values from F or C element line (ex. 20,20,20)
+/// @return single unsigned integer value of the respective rgb value
 static unsigned int	rgb_colour(int *arr)
 {
 	unsigned int	colour;
@@ -47,6 +55,9 @@ static unsigned int	rgb_colour(int *arr)
 	return (colour);
 }
 
+/// @brief parses the given rgb values
+/// @param colour rgb values from F or C element line (ex. 20,20,20)
+/// @return single unsigned integer value of the respective rgb value
 unsigned int	change_colour(char *colour)
 {
 	int				*colour_arr;

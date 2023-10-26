@@ -3,18 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   mlx_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 16:17:33 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/26 11:13:40 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:26:15 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/ray_casting_bonus.h"
+#include "../../include/ray_casting.h"
 
 /**
  * @brief puts the colour for on the wall based on x, y position
- *
  * @param x pixel position of x on the window
  * @param y pixel position of y on the window
  */
@@ -30,7 +29,6 @@ void	my_mlx_pixel_put(t_cbd *cbd, int x, int y, int color)
 
 /**
  * @brief find the pixel's colour for x and y position on the texture
- *
  * @param x texture's x position
  * @param y texture's y position
  * @return colour of the texture's pixel position
@@ -45,8 +43,6 @@ unsigned int	my_mlx_pixel_get(t_tex_img *img, int x, int y)
 	(img->bpp / 8)));
 	return (dst);
 }
-
-// static void	free_destroy_images(char)
 
 static void	destroy_images(t_cbd *cbd, t_data *data)
 {

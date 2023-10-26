@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   map_check_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 17:04:34 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/26 09:50:07 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:11:31 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/map_validation.h"
-#include "../../include/map_validation_bonus.h"
+#include "../../include/cub3d.h"
 
 /// @brief
 /// @param cub

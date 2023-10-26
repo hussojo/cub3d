@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   make_mini_map_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 10:19:46 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/25 15:50:22 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:11:36 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/cub3d.h"
-#include "../../include/map_validation.h"
-#include "../../include/ray_casting_bonus.h"
 
 /**
  * @brief draw player on the minimap

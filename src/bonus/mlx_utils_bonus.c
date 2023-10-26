@@ -6,15 +6,14 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 16:17:33 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/26 19:07:10 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:16:36 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/ray_casting_bonus.h"
+#include "../../include/cub3d.h"
 
 /**
  * @brief puts the colour for on the wall based on x, y position
- *
  * @param x pixel position of x on the window
  * @param y pixel position of y on the window
  */
@@ -30,7 +29,6 @@ void	my_mlx_pixel_put(t_cbd *cbd, int x, int y, int color)
 
 /**
  * @brief find the pixel's colour for x and y position on the texture
- *
  * @param x texture's x position
  * @param y texture's y position
  * @return colour of the texture's pixel position
@@ -67,7 +65,6 @@ static void	destroy_images_b(t_cbd *cbd, t_data *data)
 
 /**
  * @brief destroys the window and mlx, then exits if there's error
- *
  */
 int	mlx_exit_b(t_ray *ray, t_cub *cub, char *message, int flag)
 {

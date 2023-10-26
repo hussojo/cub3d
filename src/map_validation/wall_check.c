@@ -6,7 +6,7 @@
 /*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 07:51:46 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/17 14:43:31 by jhusso           ###   ########.fr       */
+/*   Updated: 2023/10/26 14:27:38 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 - set the buffer
 - flood fill to check walls are closed
 */
-
 static void	flood_fill_inside(t_cub *cub, t_data *mv, int x, int y)
 {
 	if (x < 0 || y < 0 || x > mv->height + 2 || y > mv->width + 2 \
@@ -43,6 +42,9 @@ static void	flood_fill_inside(t_cub *cub, t_data *mv, int x, int y)
 	}
 }
 
+/// @brief sets empty slots inside buffer to X
+/// @param s map line
+/// @param n map width
 static void	ft_bx(char *s, size_t n)
 {
 	char	*ptr;
@@ -54,6 +56,9 @@ static void	ft_bx(char *s, size_t n)
 		ptr[i++] = 'X';
 }
 
+/// @brief sets buffer around map to check if walls are closed
+/// @param cub
+/// @param data
 void	set_buffer(t_cub *cub, t_data *data)
 {
 	int		i;
@@ -82,8 +87,10 @@ void	set_buffer(t_cub *cub, t_data *data)
 	flood_fill_inside(cub, data, data->player_x + 1, data->player_y + 1);
 }
 
-int	wall_check(t_cub *cub, t_data *data)
+/// @brief calls set_buffer function
+/// @param cub
+/// @param data
+void	wall_check(t_cub *cub, t_data *data)
 {
 	set_buffer(cub, data);
-	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:40:08 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/26 19:09:12 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:14:38 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ typedef struct s_cub
 	int				id_flag;
 }					t_cub;
 
-void	print_struct(t_cub *cub);
 void	free_cub_struct(t_cub *cub);
 
 #endif

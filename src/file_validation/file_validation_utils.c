@@ -3,15 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   file_validation_utils.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 16:01:42 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/25 12:51:36 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 13:20:36 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/file_validation.h"
 
+/// @brief checks if rgb color starts or ends with comma or there is multiple
+/// commas in between values
+/// @param cub
+/// @param rgb_values rgb color values separated by comma
+/// (second element of an array of splitted line)
 void	multiple_commas(t_cub *cub, char *rgb_values)
 {
 	size_t	i;

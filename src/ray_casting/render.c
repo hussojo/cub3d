@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:00:33 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/26 09:22:09 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 14:39:25 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ void	render_image(t_cbd *cbd, t_ray *ray)
 
 /**
  * @brief initialise the ray struct
- *
  * @param ray stores pixel positon of x, y for DDA algorithm and bresenhamm algo
  */
 void	init_ray_struct(t_ray *ray, t_data *data, t_cbd *cbd, t_line *line)
@@ -70,7 +69,6 @@ void	init_ray_struct(t_ray *ray, t_data *data, t_cbd *cbd, t_line *line)
 
 /**
  * @brief initialise all the utility to start rendering.
- *
  * @param cbd mlx, window ins initialised
  * @param mv position of x, y on the map and width and height of the
  * map is stored

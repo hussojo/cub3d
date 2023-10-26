@@ -6,11 +6,10 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 10:33:18 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/10/26 19:04:58 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/26 19:16:20 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/ray_casting_bonus.h"
 #include "../../include/cub3d.h"
 
 /**
@@ -39,7 +38,6 @@ void	draw_background(t_ray *ray)
 
 /**
  * @brief finding the location of texture and draw the image
- * 
  * @param PR_PLANE Project plane :(WINDOW_WIDTH / 2) / tan(30degree)
  * @param y_count step size of traversing the image in y axis(top to bottom)
  */
