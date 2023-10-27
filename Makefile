@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+         #
+#    By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 12:17:49 by yoonslee          #+#    #+#              #
-#    Updated: 2023/10/27 09:00:18 by yoonslee         ###   ########.fr        #
+#    Updated: 2023/10/27 09:41:38 by jhusso           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ COLOUR_END=\033[0m
 ### SET UP ###
 CC = cc #-arch x86_64
 MLX_FLAGS = -lmlx -framework OpenGL -framework AppKit
-CFLAGS =  -I$I -Wall -Wextra -Werror -g
+CFLAGS =  -I$I -Wall -Wextra -Werror -fsanitize=address,undefined -g
 
 RM = /bin/rm -f
 RMDIR = /bin/rmdir -p

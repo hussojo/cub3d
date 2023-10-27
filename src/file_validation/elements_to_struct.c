@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   elements_to_struct.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 15:57:39 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/27 09:23:47 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/27 09:54:55 by jhusso           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ static void	put_elem_to_struct(char **element, t_cub *cub)
 /**
  * @brief check elements each and see if the RGB value has spaces
  * in between
- *
  * @param elem str that is splitted by spces from file
  * @param len len of elem str
  */
@@ -46,13 +45,13 @@ static void	check_elem(char **elem, int len, t_cub *cub)
 {
 	int	i;
 
-	i = -1;
+	i = 0;
 	while (++i < len)
 	{
 		if (!ft_strncmp_all(elem[i], ",") || \
 		(elem[i][0] == ',' && ft_isdigit(elem[i][1])))
 			file_print_error(cub, "Invalid RGB value!\n", 0);
-		else if (!ft_strchr(elem[i], ','))
+		else if (!ft_strchr(elem[i], ',') && i < (len - 1))
 			file_print_error(cub, "Invalid RGB value!\n", 0);
 	}
 	if (len > 4)
