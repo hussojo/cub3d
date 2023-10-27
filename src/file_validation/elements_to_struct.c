@@ -6,7 +6,7 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 15:57:39 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/27 09:11:24 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/10/27 09:23:47 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ static void	check_elem(char **elem, int len, t_cub *cub)
 	{
 		if (!ft_strncmp_all(elem[i], ",") || \
 		(elem[i][0] == ',' && ft_isdigit(elem[i][1])))
+			file_print_error(cub, "Invalid RGB value!\n", 0);
+		else if (!ft_strchr(elem[i], ','))
 			file_print_error(cub, "Invalid RGB value!\n", 0);
 	}
 	if (len > 4)
