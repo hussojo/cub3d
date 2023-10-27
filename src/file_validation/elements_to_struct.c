@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   elements_to_struct.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhusso <jhusso@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 15:57:39 by jhusso            #+#    #+#             */
-/*   Updated: 2023/10/26 15:16:58 by jhusso           ###   ########.fr       */
+/*   Updated: 2023/10/27 09:11:24 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,8 @@ void	find_element(char *line, t_cub *cub)
 
 	trim_line = ft_strtrim(line, " \t\n");
 	line_elem = ft_split(trim_line, ' ');
+	if (ft_arrlen(line_elem) < 2)
+		file_print_error(cub, "Invalid element!\n", 0);
 	if ((ft_arrlen(line_elem) > 2) && (!ft_strncmp_all(line_elem[0], "F") || \
 		!ft_strncmp_all(line_elem[0], "C")))
 		line_elem = put_elems_str(line_elem, cub);
